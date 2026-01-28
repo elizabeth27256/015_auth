@@ -39,6 +39,8 @@ La API estará disponible en:
 
 Código
 http://localhost:8080/api
+
+
 🔑 Endpoints
 1. Público
 URL: /api/public
@@ -68,3 +70,4 @@ Resultado esperado:
 Usuario normal: 403 Forbidden
 
 Usuario admin: 200 OK
+
