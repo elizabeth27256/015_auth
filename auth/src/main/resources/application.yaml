@@ -1,0 +1,14 @@
+aws:
+  cognito:
+    region: us-east-2
+    user_pool_id: us-east-2_XjNGg6RuP
+
+spring:
+  application:
+    name: auth
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://cognito-idp.${aws.cognito.region}.amazonaws.com/${aws.cognito.user_pool_id}
+          jwk_set_uri: https://cognito-idp.${aws.cognito.region}.amazonaws.com/${aws.cognito.user_pool_id}/.well-known/jwks.json
