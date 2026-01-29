@@ -41,7 +41,7 @@ class SecurityConfig {
         converter.setJwtGrantedAuthoritiesConverter { jwt ->
             val groups = jwt.getClaim<List<String>>("cognito:groups") ?: emptyList()
             groups.map{ group ->
-                SimpleGrantedAuthority("Role_$group")
+                SimpleGrantedAuthority("ROLE_$group")
             }
         }
         return converter
